@@ -17,7 +17,7 @@ public interface AlumnosDAO {
 	
 	ArrayList<Alumno> recogerAlumnosPK(int nia);
 	
-	ArrayList<Alumno> cambiarGrupoPK(int nia, String nombre);
+	void cambiarGrupoPK(int nia, String nombre);
 	
 	
 

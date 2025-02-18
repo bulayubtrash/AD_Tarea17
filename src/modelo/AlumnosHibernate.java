@@ -38,9 +38,8 @@ public class AlumnosHibernate implements AlumnosDAO {
 	}
 
 	@Override
-	public ArrayList<Alumno> cambiarGrupoPK(int nia, String nombre) {
+	public void cambiarGrupoPK(int nia, String nombre) {
 		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

@@ -2,11 +2,18 @@ package ficheros;
 
 import java.util.ArrayList;
 
+import objetos.Alumno;
+import objetos.Grupo;
+
 public interface FicherosPadre {
 	
-	void objectToFichero(String ruta, ArrayList<Alumno> object);
+	void AlumnoToFichero(String ruta, ArrayList<Alumno> object);
 	
-	void FicheroToObject(String ruta);
+	ArrayList<Alumno> FicheroToAlumno(String ruta);
+	
+	void GrupoToFichero(String ruta, ArrayList<Grupo> object);
+	
+	ArrayList<Grupo> FicheroToGrupo(String ruta);
 	
 	
 

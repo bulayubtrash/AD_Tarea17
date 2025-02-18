@@ -53,14 +53,25 @@ public class Controlador {
 	public void mostrarAlumnosPorGrupo() {
 		modelo = new AlumnosBD();
 		vista = new VistaConsola();
+		
+		vista.mostrarAlumnos(modelo.recogerAlumnos());
 
 	}
 	
 	public void mostrarAlumnosPorPK() {
+		modelo = new AlumnosBD();
+		vista = new VistaConsola();
+		vista.mostrarAlumnos(modelo.recogerAlumnosPK(vista.pedirInt()));
 		
 	}
 	
 	public void cambiarGrupo() {
+		
+		modelo = new AlumnosBD();
+		vista = new VistaConsola();
+		
+		modelo.cambiarGrupoPK(vista.pedirInt(), vista.pedirString());
+		vista.mostrarAlumnos(modelo.recogerAlumnos());
 		
 	}
 	
