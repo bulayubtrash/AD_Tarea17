@@ -3,10 +3,10 @@ package controlador;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import modelo.AlumnosBD;
+import ficheros.FicheroXML;
+import ficheros.FicherosPadre;
 import modelo.AlumnosDAO;
 import vista.IVista;
-import vista.VistaConsola;
 
 public class Controlador {
 
@@ -14,9 +14,9 @@ public class Controlador {
 	IVista vista;
 	
 	static Logger logger= LogManager.getLogger(Controlador.class);
+	FicherosPadre fichero;
 
 	public void ejecutar(AlumnosDAO modelo, IVista vista) {
-		vista = new VistaConsola();
 
 		int opcion;
 		do {
@@ -51,31 +51,24 @@ public class Controlador {
 	}
 
 	public void mostrarAlumnosPorGrupo() {
-		modelo = new AlumnosBD();
-		vista = new VistaConsola();
-		
 		vista.mostrarAlumnos(modelo.recogerAlumnos());
 
 	}
 	
 	public void mostrarAlumnosPorPK() {
-		modelo = new AlumnosBD();
-		vista = new VistaConsola();
 		vista.mostrarAlumnos(modelo.recogerAlumnosPK(vista.pedirInt()));
 		
 	}
 	
 	public void cambiarGrupo() {
-		
-		modelo = new AlumnosBD();
-		vista = new VistaConsola();
-		
 		modelo.cambiarGrupoPK(vista.pedirInt(), vista.pedirString());
 		vista.mostrarAlumnos(modelo.recogerAlumnos());
 		
 	}
 	
 	public void guardarGrupo() {
+		fichero= new FicheroXML();
+		fichero.GrupoToFichero(vista.pedirString(), modelo.recogerGrupo());
 		
 	}
 	

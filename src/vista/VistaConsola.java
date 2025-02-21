@@ -9,8 +9,17 @@ public class VistaConsola implements IVista {
 
 	@Override
 	public void menu() {
-		// TODO Auto-generated method stub
-		
+       	System.out.println(
+    		    "Menu\n" +
+    		    "1. Insertar alumno\n" +
+    		    "2. Insertar grupo\n" +
+    		    "3. Mostrar todos los alumnos por grupo\n" +
+    		    "4. Mostrar todos los alumnos por PK\n" +
+    		    "5. Modificar el grupo del alumno\n" +
+    		    "6. Guardar el grupo elegido\n" +
+    		    "0. Salir\n" +
+    		    "Elige una opción: "
+    		);		
 	}
 
 	@Override
