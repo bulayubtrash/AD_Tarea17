@@ -76,6 +76,11 @@
 	        <artifactId>ons</artifactId>
 	        <version>23.2.0.0</version>
 	    </dependency>
-
+	            <!-- Dependencia de MongoDB -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+            <version>4.9.0</version>
+        </dependency>
 	</dependencies>
 </project>
