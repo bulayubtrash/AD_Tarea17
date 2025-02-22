@@ -11,7 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
-@Entity(name = "Empleados")
+@Entity(name = "Alumnos")
 public class Alumno implements Serializable {
 
 	private static final long serialVersionUID = 1L;
